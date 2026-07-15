@@ -1,247 +1,471 @@
-*{
+/*=====================================================
+  BOYEDE OYEWALE OYEYANJU
+  PROFESSIONAL PORTFOLIO
+  STAGE 1 - GLOBAL STYLES
+======================================================*/
 
-margin:0;
 
-padding:0;
+/*==============================
+ GOOGLE FONT
+==============================*/
 
-box-sizing:border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==============================
+ CSS VARIABLES
+==============================*/
+
+:root{
+
+    --primary:#0F4C81;
+    --primary-dark:#0A365C;
+
+    --secondary:#2563EB;
+
+    --accent:#38BDF8;
+
+    --success:#16A34A;
+
+    --background:#F4F7FB;
+
+    --card:#FFFFFF;
+
+    --dark:#1F2937;
+
+    --gray:#6B7280;
+
+    --light-gray:#E5E7EB;
+
+    --white:#FFFFFF;
+
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+
+    --radius:16px;
+
+    --transition:.35s ease;
 
 }
+
+
+
+/*==============================
+ RESET
+==============================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
 
 html{
 
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 
 }
+
+
 
 body{
 
-font-family:'Poppins',sans-serif;
+    font-family:'Poppins',sans-serif;
 
-background:#f5f7fb;
+    background:var(--background);
 
-color:#333;
+    color:var(--dark);
+
+    line-height:1.7;
+
+}
+
+
+
+/*==============================
+ GENERAL
+==============================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
 
 }
 
-nav{
 
-display:flex;
 
-justify-content:space-between;
+a{
 
-align-items:center;
+    text-decoration:none;
 
-padding:20px 10%;
-
-background:#0f172a;
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
+    transition:var(--transition);
 
 }
+
+
+
+ul{
+
+    list-style-position:inside;
+
+}
+
+
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+
+
+section{
+
+    padding:90px 0;
+
+}
+
+
+
+section h2{
+
+    font-size:2.5rem;
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.section-subtitle{
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:60px;
+
+    text-align:center;
+
+    color:var(--gray);
+
+    font-size:1.05rem;
+
+}
+
+
+
+/*==============================
+ NAVIGATION
+==============================*/
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 6%;
+
+    background:rgba(11,31,51,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+
+}
+
+
 
 .logo{
 
-font-size:22px;
+    color:white;
 
-font-weight:700;
+    font-size:1.5rem;
 
-color:white;
+    font-weight:700;
 
-letter-spacing:1px;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
+    letter-spacing:1px;
 
 }
 
-nav ul li{
 
-margin-left:30px;
 
-}
+.nav-links{
 
-nav ul li a{
+    display:flex;
 
-text-decoration:none;
+    gap:28px;
 
-color:white;
-
-font-weight:500;
-
-transition:.3s;
+    list-style:none;
 
 }
 
-nav ul li a:hover{
 
-color:#60a5fa;
+
+.nav-links li{
+
+    list-style:none;
 
 }
+
+
+
+.nav-links a{
+
+    color:white;
+
+    font-weight:500;
+
+    font-size:.96rem;
+
+}
+
+
+
+.nav-links a:hover{
+
+    color:#93C5FD;
+
+}
+
+
+
+/*==============================
+ HERO
+==============================*/
 
 .hero{
 
-min-height:90vh;
+    background:
 
-display:flex;
+    linear-gradient(
 
-align-items:center;
+        135deg,
 
-padding:80px 10%;
+        var(--primary),
 
-background:linear-gradient(135deg,#0f172a,#1d4ed8);
+        var(--secondary)
 
-color:white;
+    );
 
-}
+    color:white;
 
-.hero-content{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-gap:60px;
-
-width:100%;
+    padding:100px 0;
 
 }
 
-.hero-text{
 
-flex:1;
 
-}
+.hero-container{
 
-.hero-text h3{
+    width:min(1200px,92%);
 
-font-size:24px;
+    margin:auto;
 
-font-weight:400;
+    display:grid;
 
-}
+    grid-template-columns:1.3fr .9fr;
 
-.hero-text h1{
+    gap:60px;
 
-font-size:54px;
-
-margin:10px 0;
+    align-items:center;
 
 }
 
-.hero-text h2{
 
-font-size:24px;
 
-font-weight:500;
+.hero-greeting{
 
-margin-bottom:25px;
+    font-size:1.2rem;
 
-color:#93c5fd;
+    color:#DBEAFE;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:3.6rem;
+
+    line-height:1.15;
+
+    margin-bottom:18px;
 
 }
 
-.hero-text p{
 
-font-size:18px;
 
-line-height:1.8;
+.hero h2{
 
-margin-bottom:35px;
+    font-size:1.4rem;
 
-max-width:650px;
+    font-weight:500;
+
+    margin-bottom:25px;
 
 }
+
+
+
+.hero h2 span{
+
+    color:#93C5FD;
+
+    margin:0 10px;
+
+}
+
+
+
+.hero-description{
+
+    font-size:1.08rem;
+
+    max-width:650px;
+
+    color:#E5E7EB;
+
+}
+
+
 
 .hero-buttons{
 
-display:flex;
+    display:flex;
 
-gap:20px;
+    flex-wrap:wrap;
 
-}
+    gap:20px;
 
-.btn-primary{
-
-padding:15px 30px;
-
-background:#2563eb;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:8px;
-
-font-weight:600;
-
-transition:.3s;
+    margin-top:40px;
 
 }
 
-.btn-primary:hover{
 
-background:#1d4ed8;
 
-}
-
-.btn-secondary{
-
-padding:15px 30px;
-
-border:2px solid white;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:8px;
-
-transition:.3s;
-
-}
-
-.btn-secondary:hover{
-
-background:white;
-
-color:#0f172a;
-
-}
+/*==============================
+ HERO IMAGE
+==============================*/
 
 .hero-image{
 
-flex:1;
+    display:flex;
 
-display:flex;
-
-justify-content:center;
+    justify-content:center;
 
 }
+
+
 
 .hero-image img{
 
-width:360px;
+    width:360px;
 
-height:360px;
+    height:360px;
 
-border-radius:50%;
+    object-fit:cover;
 
-object-fit:cover;
+    border-radius:50%;
 
-border:8px solid white;
+    border:8px solid white;
 
-box-shadow:0 15px 40px rgba(0,0,0,.3);
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.25);
 
 }
+
+
+
+/*==============================
+ BUTTONS
+==============================*/
+
+.btn-primary{
+
+    background:white;
+
+    color:var(--primary);
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+}
+
+
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+
+/*==============================
+ SECTION DIVIDER
+==============================*/
+
+section:nth-child(even){
+
+    background:white;
+
+}
+
