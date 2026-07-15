@@ -739,3 +739,92 @@ nav .container{
     scroll-margin-top:100px;
 
 }
+/*=========================================================
+  ABOUT SECTION
+=========================================================*/
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr;
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+.about-content{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-content h3{
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.about-content p{
+
+    margin-bottom:20px;
+
+    text-align:justify;
+
+}
+
+.about-highlights{
+
+    display:grid;
+
+    gap:25px;
+
+}
+
+.highlight-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    border-left:5px solid var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.highlight-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.highlight-card p{
+
+    margin:0;
+
+    color:var(--text-light);
+
+}
